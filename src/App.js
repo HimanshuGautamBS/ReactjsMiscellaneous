@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import './App.css';
+import React, {useState , useEffect} from 'react'
+import * as user from "./User";
 function App() {
+
+const [count, setCount]  = useState(1)
+
+useEffect(()=>{
+  // alert("clicked")
+},[])
+
+function incrementCount(){
+  setCount(prev=>prev+2)
+ }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={incrementCount}>+</button>
+     <span>{count}</span> 
+     <user.default name="herry"/>
+     <div style={{padding:"20px"}}>{user.uno()}
+     {user.dos()}
+     {user.tres()}</div>
+
     </div>
   );
 }
