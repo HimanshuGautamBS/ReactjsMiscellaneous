@@ -11,10 +11,10 @@ const User=()=>{
         const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${num}`)
         console.log(res.data.name)
       }
-      getData();
+      getData(); 
     },)
   return (
-    <> 
+    <React.Fragment> 
       <h1>You selected {num}</h1>
       <select
         value={num}
@@ -25,7 +25,7 @@ const User=()=>{
         <option value={i}>{i}</option>
         )} 
       </select>
-    </>  
+    </React.Fragment>  
 )
 }
 
