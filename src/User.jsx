@@ -10,7 +10,11 @@ const uno=()=>{
 
 
 const dos=()=>{
-    return "I am Two"
+  return new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        resolve ("I am Two");
+    }, 3000);
+  })    
 }
 
 
@@ -18,7 +22,18 @@ const tres=()=>{
     return "I am Three"
 }
 
+const callMe = async() =>{
+    let valOne= uno();
+    console.log (valOne)
 
+    let valTwo= await dos();
+    console.log (valTwo)
+
+    let valThree= tres();
+   console.log (valThree);
+
+    
+}
 
 export default User;
-export {uno,dos,tres};
+export {uno,dos,tres,callMe};

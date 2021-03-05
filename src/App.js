@@ -20,6 +20,7 @@ function incrementCount(){
      <div style={{padding:"20px"}}>{user.uno()}
      {user.dos()}
      {user.tres()}</div>
+     {user.callMe()}
 
     </div>
   );
