@@ -17,11 +17,12 @@ function incrementCount(){
       <button onClick={incrementCount}>+</button>
      <span>{count}</span> 
      <user.default name="herry"/>
-     <div style={{padding:"20px"}}>{user.uno()}
-     {user.dos()}
+     <div style={{padding:"20px"}}>
+       {/* {user.uno()} */}
+     {/* {user.dos()}
      {user.tres()}</div>
-     {user.callMe()}
-
+     {user.callMe()} */}
+</div>
     </div>
   );
 }
